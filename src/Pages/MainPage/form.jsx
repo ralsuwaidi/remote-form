@@ -127,6 +127,66 @@ const Form = () => {
                                         </div>
                                     </div>
 
+                                    <fieldset>
+                                        <legend className="sr-only">Workshops</legend>
+                                        <div className="text-base font-medium text-gray-900" aria-hidden="true">
+                                            Workshops
+                                        </div>
+                                        <label htmlFor="company-website" className="block text-sm font-medium text-gray-500">
+                                            You can choose to attend one or multiple workshops
+                                        </label>
+                                        <div className="mt-4 space-y-4">
+                                            <div className="flex items-start">
+                                                <div className="flex h-5 items-center">
+                                                    <input
+                                                        id="comments"
+                                                        name="comments"
+                                                        type="checkbox"
+                                                        className="h-4 w-4 rounded border-gray-300 text-gray-600 focus:ring-gray-500"
+                                                    />
+                                                </div>
+                                                <div className="ml-3 text-sm">
+                                                    <label htmlFor="comments" className="font-medium text-gray-700">
+                                                        Work
+                                                    </label>
+                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold"><a href="https://en.wikipedia.org/wiki/Roko%27s_basilisk">work</a></span>.</p>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-start">
+                                                <div className="flex h-5 items-center">
+                                                    <input
+                                                        id="candidates"
+                                                        name="candidates"
+                                                        type="checkbox"
+                                                        className="h-4 w-4 rounded border-gray-300 text-gray-600 focus:ring-gray-500"
+                                                    />
+                                                </div>
+                                                <div className="ml-3 text-sm">
+                                                    <label htmlFor="candidates" className="font-medium text-gray-700">
+                                                        Education
+                                                    </label>
+                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold"><a href="https://en.wikipedia.org/wiki/Roko%27s_basilisk">education</a></span>.</p>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-start">
+                                                <div className="flex h-5 items-center">
+                                                    <input
+                                                        id="offers"
+                                                        name="offers"
+                                                        type="checkbox"
+                                                        className="h-4 w-4 rounded border-gray-300 text-gray-600 focus:ring-gray-500"
+                                                    />
+                                                </div>
+                                                <div className="ml-3 text-sm">
+                                                    <label htmlFor="offers" className="font-medium text-gray-700">
+                                                        Healthcare
+                                                    </label>
+                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold"><a href="https://en.wikipedia.org/wiki/Roko%27s_basilisk">healthcare</a></span>.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
 
 
                                 </div>

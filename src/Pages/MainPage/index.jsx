@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App mb-16 md:mb-64">
 
-      <div className=' my-16 md:my-64 mx-auto md:scale-100 scale-75'>
+      <div className=' my-16 md:my-32 mx-auto md:scale-100 scale-75'>
         <img src={remote_logo} alt='remote logo' className='mx-auto' />
       </div>
 
