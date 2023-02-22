@@ -10,22 +10,22 @@ const Form = () => {
 
 
                     <div className="mt-5  md:mt-0">
-                        <form action="#" method="POST">
+                        <form action="#" method="POST" >
                             <div className=" sm:overflow-hidden sm:rounded-md">
                                 <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
 
 
                                     <div className="col-span-3 sm:col-span-2">
-                                        <label htmlFor="company-website" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="fullname" className="block text-sm font-medium text-gray-700">
                                             Full Name (english)
                                         </label>
                                         <div className="mt-1 flex rounded-md shadow-sm">
 
                                             <input
                                                 type="text"
-                                                name="company-website"
+                                                name="fullname"
                                                 required='true'
-                                                id="company-website"
+                                                id="fullname"
                                                 className="block w-full flex-1  rounded-md border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
                                                 placeholder="Rashed AlSuwaidi"
                                             />
@@ -33,15 +33,15 @@ const Form = () => {
                                     </div>
 
                                     <div className="col-span-3 sm:col-span-2">
-                                        <label htmlFor="company-website" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="fullname_ar" className="block text-sm font-medium text-gray-700">
                                             Full Name (arabic)
                                         </label>
                                         <div className="mt-1 flex rounded-md shadow-sm">
 
                                             <input
                                                 type="text"
-                                                name="company-website"
-                                                id="company-website" dir="rtl"
+                                                name="fullname_ar"
+                                                id="fullname_ar" dir="rtl"
                                                 className="block w-full flex-1  rounded-md border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
                                                 placeholder="راشد السويدي"
                                             />
@@ -49,11 +49,11 @@ const Form = () => {
                                     </div>
 
                                     <div className="col-span-3 sm:col-span-2">
-                                        <label htmlFor="company-website" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="honorific" className="block text-sm font-medium text-gray-700">
                                             Title (honorific)
                                         </label>
                                         <select
-                                            id="country"
+                                            id="honorific"
                                             name="country"
                                             autoComplete="country-name"
                                             className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm"
@@ -65,15 +65,15 @@ const Form = () => {
                                     </div>
 
                                     <div className="col-span-3 sm:col-span-2">
-                                        <label htmlFor="company-website" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="job_title" className="block text-sm font-medium text-gray-700">
                                             Job Title
                                         </label>
                                         <div className="mt-1 flex rounded-md shadow-sm">
 
                                             <input
                                                 type="text"
-                                                name="company-website"
-                                                id="company-website"
+                                                name="job_title"
+                                                id="job_title"
                                                 className="block w-full flex-1  rounded-md border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
                                                 placeholder="SR. Engineer, Project Manager"
                                             />
@@ -81,15 +81,15 @@ const Form = () => {
                                     </div>
 
                                     <div className="col-span-3 sm:col-span-2">
-                                        <label htmlFor="company-website" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="entity" className="block text-sm font-medium text-gray-700">
                                             Entity
                                         </label>
                                         <div className="mt-1 flex rounded-md shadow-sm">
 
                                             <input
                                                 type="text"
-                                                name="company-website"
-                                                id="company-website"
+                                                name="entity"
+                                                id="entity"
                                                 className="block w-full flex-1  rounded-md border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
                                                 placeholder="Etisalat, Mubadala "
                                             />
@@ -97,15 +97,15 @@ const Form = () => {
                                     </div>
 
                                     <div className="col-span-3 sm:col-span-2">
-                                        <label htmlFor="company-website" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                                             Email
                                         </label>
                                         <div className="mt-1 flex rounded-md shadow-sm">
 
                                             <input
                                                 type="text"
-                                                name="company-website"
-                                                id="company-website"
+                                                name="email"
+                                                id="email"
                                                 className="block w-full flex-1  rounded-md border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
                                                 placeholder="admin@example.com"
                                             />
@@ -113,7 +113,7 @@ const Form = () => {
                                     </div>
 
                                     <div className="col-span-3 sm:col-span-2">
-                                        <label htmlFor="company-website" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="mobile" className="block text-sm font-medium text-gray-700">
                                             Mobile
                                         </label>
                                         <div className="mt-1 flex rounded-md shadow-sm">
@@ -121,8 +121,8 @@ const Form = () => {
                                             <input
                                                 type="text"
                                                 required='true'
-                                                name="company-website"
-                                                id="company-website"
+                                                name="mobile"
+                                                id="mobile"
                                                 className="block w-full flex-1  rounded-md border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
                                                 placeholder="00971500000000"
                                             />
@@ -141,7 +141,7 @@ const Form = () => {
                                             <div className="flex items-start">
                                                 <div className="flex h-5 items-center">
                                                     <input
-                                                        id="comments"
+                                                        id="work"
                                                         name="comments"
                                                         type="checkbox"
                                                         className="h-4 w-4 rounded border-gray-300 text-gray-600 focus:ring-gray-500"
@@ -157,7 +157,7 @@ const Form = () => {
                                             <div className="flex items-start">
                                                 <div className="flex h-5 items-center">
                                                     <input
-                                                        id="candidates"
+                                                        id="education"
                                                         name="candidates"
                                                         type="checkbox"
                                                         className="h-4 w-4 rounded border-gray-300 text-gray-600 focus:ring-gray-500"
@@ -173,7 +173,7 @@ const Form = () => {
                                             <div className="flex items-start">
                                                 <div className="flex h-5 items-center">
                                                     <input
-                                                        id="offers"
+                                                        id="healthcare"
                                                         name="offers"
                                                         type="checkbox"
                                                         className="h-4 w-4 rounded border-gray-300 text-gray-600 focus:ring-gray-500"
@@ -190,9 +190,13 @@ const Form = () => {
                                     </fieldset>
 
 
+                                    <div className="pt-3 md:pt-5">
+                                        <hr />
+                                    </div>
+
 
                                 </div>
-                                <div className=" px-4 py-3 text-right sm:px-6">
+                                <div className=" px-4 py-3 text-center md:text-left sm:px-6">
                                     <button
                                         type="submit"
                                         className="inline-flex justify-center rounded-sm border border-transparent bg-black py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
