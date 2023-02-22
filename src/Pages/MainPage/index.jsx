@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App mb-16 md:mb-64">
 
-      <div className=' my-16 md:my-32 mx-auto md:scale-100 scale-75'>
-        <img src={remote_logo} alt='remote logo' className='mx-auto max-w-2xl' />
+      <div className=' my-16 md:my-32 mx-16'>
+        <img src={remote_logo} alt='remote logo' className='mx-auto md:max-w-2xl ' />
       </div>
 
       <Form />
