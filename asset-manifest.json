@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/remote-form/static/css/main.6c53df0f.css",
+    "main.js": "/remote-form/static/js/main.5c53fe61.js",
+    "static/js/787.eaa1abaf.chunk.js": "/remote-form/static/js/787.eaa1abaf.chunk.js",
+    "index.html": "/remote-form/index.html",
+    "main.6c53df0f.css.map": "/remote-form/static/css/main.6c53df0f.css.map",
+    "main.5c53fe61.js.map": "/remote-form/static/js/main.5c53fe61.js.map",
+    "787.eaa1abaf.chunk.js.map": "/remote-form/static/js/787.eaa1abaf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c53df0f.css",
+    "static/js/main.5c53fe61.js"
+  ]
+}
