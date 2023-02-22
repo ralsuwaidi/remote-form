@@ -24,6 +24,7 @@ const Form = () => {
                                             <input
                                                 type="text"
                                                 name="company-website"
+                                                required='true'
                                                 id="company-website"
                                                 className="block w-full flex-1  rounded-md border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
                                                 placeholder="Rashed AlSuwaidi"
@@ -119,6 +120,7 @@ const Form = () => {
 
                                             <input
                                                 type="text"
+                                                required='true'
                                                 name="company-website"
                                                 id="company-website"
                                                 className="block w-full flex-1  rounded-md border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
