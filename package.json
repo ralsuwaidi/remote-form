@@ -1,6 +1,6 @@
 {
-  "name": "react-tailwind-boilerplate",
-  "homepage": "https://ralsuwaidi.github.io/react-tailwind-boilerplate",
+  "name": "remote-form",
+  "homepage": "https://ralsuwaidi.github.io/remote-form",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
