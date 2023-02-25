@@ -242,10 +242,10 @@ const Form = () => {
 
 
                                 </div>
-                                <div className=" px-4 py-3 text-center md:text-left sm:px-6">
+                                <div className=" px-4 py-3  text-center md:text-left sm:px-6">
                                     <button
                                         type="submit"
-                                        className="inline-flex justify-center rounded-sm border border-transparent bg-black py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                                        className="inline-flex justify-center w-full md:w-fit rounded-sm border border-transparent bg-black py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
                                     >
                                         Submit
                                     </button>
