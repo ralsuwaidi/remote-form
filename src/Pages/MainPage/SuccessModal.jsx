@@ -11,12 +11,14 @@ const SuccessModal = ({ isOpen, message, onClose }) => {
         >
             <div className="flex items-center justify-center min-h-screen p-4 bg-gray-500 bg-opacity-50">
 
-                <div className="modal-content bg-white rounded-lg overflow-hidden shadow-md ">
+                <div className="modal-content bg-white rounded-md overflow-hidden shadow-md ">
                     <div className="p-4 flex flex-col items-center">
-                        <svg className="h-10 w-10 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <h3 className=" font-medium mb-2 mt-4 text-center" id="modal-title">
+
+
+                        <h3 className=" font-medium mb-2 mt-2 text-center" id="modal-title">
                             Success
                         </h3>
                         <p className="text-gray-500 text-center text-sm">{message}</p>
