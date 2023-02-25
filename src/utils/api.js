@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default axios.create({
+const axiosBase = axios.create({
     baseURL: process.env.REACT_APP_BASE_URL,
     headers: {
         "Authorization": "Bearer " + process.env.REACT_APP_STRAPI_TOKEN,
@@ -8,3 +8,17 @@ export default axios.create({
     }
 
 });
+
+const createAccount = async (fullname, email, mobile) => {
+    const response = await axiosBase.post(`accounts`, {
+        data: {
+            fullname: fullname,
+            email: email,
+            mobile: mobile
+        }
+    });
+
+    return response;
+}
+
+export { createAccount }

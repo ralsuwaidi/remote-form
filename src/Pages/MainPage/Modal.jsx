@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SuccessModal = ({ isOpen, message, onClose }) => {
+const Modal = ({ title, isOpen, message, onClose }) => {
     return (
         <div
             className={`${isOpen ? 'block' : 'hidden'
@@ -19,13 +19,13 @@ const SuccessModal = ({ isOpen, message, onClose }) => {
 
 
                         <h3 className=" font-medium mb-2 mt-2 text-center" id="modal-title">
-                            Success
+                            {title}
                         </h3>
                         <p className="text-gray-500 text-center text-sm">{message}</p>
                     </div>
                     <div className="p-4  text-center">
                         <button
-                            className="px-4 py-2 text-sm w-full  rounded-sm bg-black text-white hover:bg-green-600"
+                            className="px-4 py-2 text-sm w-full  rounded-sm bg-black text-white hover:bg-gray-600"
                             onClick={onClose}
                         >
                             Close
@@ -38,4 +38,4 @@ const SuccessModal = ({ isOpen, message, onClose }) => {
     );
 };
 
-export default SuccessModal;
+export default Modal;

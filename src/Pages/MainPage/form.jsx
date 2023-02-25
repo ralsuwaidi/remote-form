@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import SuccessModal from "./SuccessModal";
+import Modal from "./Modal";
+import { createAccount } from "../../utils/api";
 
 const Form = () => {
     const [name, setName] = useState()
@@ -13,25 +14,72 @@ const Form = () => {
     const [eductation, setEducation] = useState(false)
     const [healthcare, serHealthcare] = useState(false)
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalTitle, setModalTitle] = useState("Success!")
+    const [modalInfo, setModalInfo] = useState("Your form has been submitted successfully!")
+    const [errorResponse, setErrorResponse] = useState(
+        {
+            fullname: "",
+            email: "",
+            mobile: ""
+        }
+    )
 
-    const handleSubmit = (event) => {
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
 
-        console.log(name)
-        console.log(email)
-        console.log(mobile)
+        // console.log(name)
+        // console.log(email)
+        // console.log(mobile)
 
-        console.log(nameAr)
-        console.log(title)
-        console.log(jobTitle)
-        console.log(entity)
-        console.log(work)
-        console.log(eductation)
-        console.log(healthcare)
+        // console.log(nameAr)
+        // console.log(title)
+        // console.log(jobTitle)
+        // console.log(entity)
+        // console.log(work)
+        // console.log(eductation)
+        // console.log(healthcare)
+
+        // try to create an account using the createAccount function
+        try {
+            await createAccount(name, email, mobile);
+            // log the response to the console
+            setErrorResponse({
+                fullname: "",
+                email: "",
+                mobile: ""
+            })
+            setModalTitle("Success!")
+            setModalInfo("Your form has been submitted successfully!")
+            event.target.reset();
+        }
+        // if an error occurs, log the error response data to the console and set the error response state
+        catch (error) {
+            console.log(error.response.data.error)
+
+            // loop over errors and save to response
+            let allErrors = {}
+            for (let i = 0; i < error.response.data.error.details.errors.length; i++) {
+                const errorObject = error.response.data.error.details.errors[i]
+                console.log(errorObject);
+                allErrors[errorObject.path[0]] = errorObject.message
+            }
+            setErrorResponse(allErrors)
+
+
+            // setErrorResponse({
+
+            // })
+            setModalTitle(error.response.data.error.message)
+            setModalInfo(error.response.data.error.details.errors[0].message)
+        }
+        // set the isModalOpen state to true to open the modal
         setIsModalOpen(true);
 
     }
+
+
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
@@ -66,6 +114,8 @@ const Form = () => {
                                                 placeholder="Rashed AlSuwaidi"
                                             />
                                         </div>
+                                        <p class="mt-2 text-sm text-red-600 dark:text-red-500">{errorResponse.fullname}</p>
+
                                     </div>
 
                                     <div className="col-span-3 sm:col-span-2">
@@ -151,6 +201,8 @@ const Form = () => {
                                                 placeholder="admin@example.com"
                                             />
                                         </div>
+                                        <p class="mt-2 text-sm text-red-600 dark:text-red-500">{errorResponse.email}</p>
+
                                     </div>
 
                                     <div className="col-span-3 sm:col-span-2">
@@ -169,7 +221,7 @@ const Form = () => {
                                                 placeholder="00971500000000"
                                             />
                                         </div>
-                                        <p class="mt-2 text-sm text-red-600 dark:text-red-500">Username already taken!</p>
+                                        <p class="mt-2 text-sm text-red-600 dark:text-red-500">{errorResponse.mobile}</p>
                                     </div>
 
                                     <fieldset>
@@ -254,9 +306,10 @@ const Form = () => {
                         </form>
                     </div>
                 </div>
-                <SuccessModal
+                <Modal
                     isOpen={isModalOpen}
-                    message="Your form has been submitted successfully!"
+                    title={modalTitle}
+                    message={modalInfo}
                     onClose={handleCloseModal}
                 />
             </div>
