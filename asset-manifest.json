@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/remote-form/static/css/main.60db7364.css",
-    "main.js": "/remote-form/static/js/main.df25ad71.js",
+    "main.css": "/remote-form/static/css/main.7b935840.css",
+    "main.js": "/remote-form/static/js/main.1c522956.js",
     "static/js/787.eaa1abaf.chunk.js": "/remote-form/static/js/787.eaa1abaf.chunk.js",
     "static/media/REMOTE_LOGO_ENGLISH.png": "/remote-form/static/media/REMOTE_LOGO_ENGLISH.8cd289f037a531ee5a69.png",
     "index.html": "/remote-form/index.html",
-    "main.60db7364.css.map": "/remote-form/static/css/main.60db7364.css.map",
-    "main.df25ad71.js.map": "/remote-form/static/js/main.df25ad71.js.map",
+    "main.7b935840.css.map": "/remote-form/static/css/main.7b935840.css.map",
+    "main.1c522956.js.map": "/remote-form/static/js/main.1c522956.js.map",
     "787.eaa1abaf.chunk.js.map": "/remote-form/static/js/787.eaa1abaf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60db7364.css",
-    "static/js/main.df25ad71.js"
+    "static/css/main.7b935840.css",
+    "static/js/main.1c522956.js"
   ]
 }
