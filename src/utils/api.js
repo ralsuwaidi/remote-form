@@ -21,4 +21,19 @@ const createAccount = async (fullname, email, mobile) => {
     return response;
 }
 
-export { createAccount }
+const createParticipation = async (id, fullname_ar, job_title, entity, honorific_title, sessions) => {
+    const response = await axiosBase.post(`participation-remotes`, {
+        data: {
+            account: id,
+            fullname_ar: fullname_ar,
+            job_title: job_title,
+            entity: entity,
+            sessions: sessions,
+            honorific_title: honorific_title,
+        }
+    });
+
+    return response;
+}
+
+export { createAccount, createParticipation }

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Modal from "./Modal";
-import { createAccount } from "../../utils/api";
+import { createAccount, createParticipation } from "../../utils/api";
 
 const Form = () => {
     const [name, setName] = useState()
@@ -28,41 +28,34 @@ const Form = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-
-        // console.log(name)
-        // console.log(email)
-        // console.log(mobile)
-
-        // console.log(nameAr)
-        // console.log(title)
-        // console.log(jobTitle)
-        // console.log(entity)
-        // console.log(work)
-        // console.log(eductation)
-        // console.log(healthcare)
-
         // try to create an account using the createAccount function
         try {
-            await createAccount(name, email, mobile);
+            const response = await createAccount(name, email, mobile);
             // log the response to the console
             setErrorResponse({
                 fullname: "",
                 email: "",
                 mobile: ""
             })
+
+
+            let interest = []
+            if (work === true) interest.push("work");
+            if (eductation === true) interest.push("education");
+            if (healthcare === true) interest.push("healthcare");
+            const accountId = response.data.data.id
+            const responseParticipation = await createParticipation(accountId, name, jobTitle, entity, title, interest)
             setModalTitle("Success!")
             setModalInfo("Your form has been submitted successfully!")
             event.target.reset();
         }
         // if an error occurs, log the error response data to the console and set the error response state
         catch (error) {
-            console.log(error.response.data.error)
 
             // loop over errors and save to response
             let allErrors = {}
             for (let i = 0; i < error.response.data.error.details.errors.length; i++) {
                 const errorObject = error.response.data.error.details.errors[i]
-                console.log(errorObject);
                 allErrors[errorObject.path[0]] = errorObject.message
             }
             setErrorResponse(allErrors)
