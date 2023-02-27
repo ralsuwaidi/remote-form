@@ -16,6 +16,7 @@ const Form = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalTitle, setModalTitle] = useState("Success!")
     const [modalInfo, setModalInfo] = useState("Your form has been submitted successfully!")
+    const [errorIcon, setErrorIcon] = useState(false)
     const [errorResponse, setErrorResponse] = useState(
         {
             fullname: "",
@@ -45,6 +46,8 @@ const Form = () => {
             if (healthcare === true) interest.push("healthcare");
             const accountId = response.data.data.id
             const responseParticipation = await createParticipation(accountId, nameAr, jobTitle, entity, title, interest)
+            setErrorIcon(false)
+
             setModalTitle("Success!")
             setModalInfo("Your form has been submitted successfully!")
             event.target.reset();
@@ -64,7 +67,8 @@ const Form = () => {
             // setErrorResponse({
 
             // })
-            setModalTitle(error.response.data.error.message)
+            setErrorIcon(true)
+            setModalTitle("Error")
             setModalInfo(error.response.data.error.details.errors[0].message)
         }
         // set the isModalOpen state to true to open the modal
@@ -304,6 +308,7 @@ const Form = () => {
                     title={modalTitle}
                     message={modalInfo}
                     onClose={handleCloseModal}
+                    showError={errorIcon}
                 />
             </div>
 
