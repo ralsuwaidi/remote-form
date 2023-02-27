@@ -108,7 +108,7 @@ const Form = () => {
                                                 onChange={e => setName(e.target.value)}
                                                 id="fullname"
                                                 className="block w-full flex-1  rounded-md border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
-                                                placeholder="Rashed AlSuwaidi"
+                                                placeholder="Musab AlSuwaidi"
                                             />
                                         </div>
                                         <p class="mt-2 text-sm text-red-600 dark:text-red-500">{errorResponse.fullname}</p>
