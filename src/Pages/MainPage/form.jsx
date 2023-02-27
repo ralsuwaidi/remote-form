@@ -145,7 +145,7 @@ const Form = () => {
                                         >
                                             <option>Mr</option>
                                             <option>Ms</option>
-                                            <option>Excellency</option>
+                                            <option>Dr</option>
                                         </select>
                                     </div>
 
