@@ -44,7 +44,7 @@ const Form = () => {
             if (eductation === true) interest.push("education");
             if (healthcare === true) interest.push("healthcare");
             const accountId = response.data.data.id
-            const responseParticipation = await createParticipation(accountId, name, jobTitle, entity, title, interest)
+            const responseParticipation = await createParticipation(accountId, nameAr, jobTitle, entity, title, interest)
             setModalTitle("Success!")
             setModalInfo("Your form has been submitted successfully!")
             event.target.reset();
