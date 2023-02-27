@@ -244,7 +244,7 @@ const Form = () => {
                                                     <label htmlFor="comments" className="font-medium text-gray-700">
                                                         Work - day 1
                                                     </label>
-                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold"><a href="https://en.wikipedia.org/wiki/Roko%27s_basilisk">work</a></span>.</p>
+                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold">work</span>.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
@@ -261,7 +261,7 @@ const Form = () => {
                                                     <label htmlFor="candidates" className="font-medium text-gray-700">
                                                         Education - day 2
                                                     </label>
-                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold"><a href="https://en.wikipedia.org/wiki/Roko%27s_basilisk">education</a></span>.</p>
+                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold">education</span>.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
@@ -278,7 +278,7 @@ const Form = () => {
                                                     <label htmlFor="offers" className="font-medium text-gray-700">
                                                         Healthcare - day 2
                                                     </label>
-                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold"><a href="https://en.wikipedia.org/wiki/Roko%27s_basilisk">healthcare</a></span>.</p>
+                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold">healthcare</span>.</p>
                                                 </div>
                                             </div>
                                         </div>
