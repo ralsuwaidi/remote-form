@@ -45,7 +45,8 @@ const Form = () => {
             if (eductation === true) interest.push("education");
             if (healthcare === true) interest.push("healthcare");
             const accountId = response.data.data.id
-            const responseParticipation = await createParticipation(accountId, nameAr, jobTitle, entity, title, interest)
+            await createParticipation(accountId, nameAr, jobTitle, entity, title, interest)
+
             setErrorIcon(false)
 
             setModalTitle("Success!")
@@ -207,15 +208,17 @@ const Form = () => {
                                             Mobile
                                         </label>
                                         <div className="mt-1 flex rounded-md shadow-sm">
-
+                                            <span class="inline-flex items-center px-3 text-sm text-gray-500 bg-gray-50 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                                                +
+                                            </span>
                                             <input
                                                 type="text"
                                                 required='true'
                                                 onChange={e => setMobile(e.target.value)}
                                                 name="mobile"
                                                 id="mobile"
-                                                className="block w-full flex-1  rounded-md border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
-                                                placeholder="00971500000000"
+                                                className="block w-full flex-1  rounded-none rounded-r-md border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
+                                                placeholder="971500000000"
                                             />
                                         </div>
                                         <p class="mt-2 text-sm text-red-600 dark:text-red-500">{errorResponse.mobile}</p>
@@ -244,7 +247,7 @@ const Form = () => {
                                                     <label htmlFor="comments" className="font-medium text-gray-700">
                                                         Work - day 1
                                                     </label>
-                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold">work</span>.</p>
+                                                    <p className="text-gray-500">Workshops related to  <span className="  text-black font-bold">work</span>.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
@@ -261,7 +264,7 @@ const Form = () => {
                                                     <label htmlFor="candidates" className="font-medium text-gray-700">
                                                         Education - day 2
                                                     </label>
-                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold">education</span>.</p>
+                                                    <p className="text-gray-500">Workshops related to  <span className="  text-black font-bold">education</span>.</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-start">
@@ -278,7 +281,7 @@ const Form = () => {
                                                     <label htmlFor="offers" className="font-medium text-gray-700">
                                                         Healthcare - day 2
                                                     </label>
-                                                    <p className="text-gray-500">Workshops related to  <span className=" underline text-black font-bold">healthcare</span>.</p>
+                                                    <p className="text-gray-500">Workshops related to  <span className="  text-black font-bold">healthcare</span>.</p>
                                                 </div>
                                             </div>
                                         </div>
